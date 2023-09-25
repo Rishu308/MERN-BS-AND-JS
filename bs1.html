@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethnus Layout</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the layout */
+        .blue-bar {
+            background-color: #07c3e0; /* Adjust the background color if needed */
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blue-bar-text {
+            color: black; /* Change the text color to black */
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .gray-bar {
+            background-color: #808080;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+        .menu-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-items li {
+            display: inline;
+            margin-right: 30px; /* Increased margin for Home, Menu, About, etc. */
+            color: #808080; /* Gray color for other items */
+        }
+
+        /* Set color for specific items */
+        .menu-items li:nth-child(1),
+        .menu-items li:nth-child(2),
+        .menu-items li:nth-child(3),
+        .menu-items li:nth-child(4),
+        .white-text {
+            color: white;
+        }
+
+        .white-content {
+            background-color: white;
+            padding: 20px;
+            width: 80%;
+            float: left;
+            text-align: center;
+            height: 80vh;
+        }
+
+        .black-content {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            width: 20%;
+            float: right;
+            text-align: center;
+            height: 80vh;
+        }
+
+        /* Reduced spacing between Signup and Login */
+        .white-text {
+            margin-right: 0px; /* Adjusted to 5px */
+        }
+
+        /* Clearfix for floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="blue-bar">
+        <span class="blue-bar-text">Ethnus Layout</span>
+    </div>
+    <div class="gray-bar">
+        <ul class="menu-items">
+            <li>Home</li>
+            <li>Menu</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li style="margin-right: 30px;">Random</li>
+            <li style="margin-right: 30px;">Ass</li>
+            <li style="margin-right: 30px;">Words</li>
+            <li style="margin-right: 30px;">Random</li>
+            <li style="margin-right: 30px;">Ass</li>
+            <li style="margin-right: 30px;">Words</li>
+            <li style="margin-right: 30px;">Random</li>
+            <li style="margin-right: 30px;">Ass</li>
+            <li style="margin-right: 30px;">Words</li>
+            <li style="margin-right: 30px;">Random</li>
+            <li style="margin-right: 30px;">Ass</li>
+            <!-- Add more random words as needed -->
+        </ul>
+        <span class="white-text">Signup</span><span class="white-text" style="margin-right: 5px;">Login</span>
+    </div>
+    
+    
+    <div class="clearfix">
+        <div class="white-content">
+            Write your content here
+        </div>
+        <div class="black-content">
+            This is
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Form Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+            <div class="form-group mb-3">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control" [(ngModel)]="model.name" #name="ngModel"
+                    [ngClass]="{ 'is-invalid': userForm.submitted && name.invalid }" required />
+                <div class="invalid-feedback" *ngIf="userForm.submitted && name.invalid">
+                    <p *ngIf="name.invalid">Name is required</p>
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label>Email</label>
+                <input type="email" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel"
+                    [ngClass]="{ 'is-invalid': userForm.submitted && email.invalid }" email required />
+                <div *ngIf="userForm.submitted && email.invalid" class="invalid-feedback">
+                    <div *ngIf="email.invalid">Email is required</div>
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="model.password"
+                    #password="ngModel" [ngClass]="{ 'is-invalid': userForm.submitted && password.invalid }"
+                    minlength="8" required />
+                <div *ngIf="userForm.submitted && password.invalid" class="invalid-feedback">
+                    <div *ngIf="password.invalid">Password is required</div>
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label>Hobbies</label>
+                <select class="form-control" name="hobbies" [(ngModel)]="model.hobbies">
+                    <option value="">Select an option</option>
+                    <option *ngFor="let hoby of Hobbies" [value]="hoby">
+                        {{ hoby }}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-danger btn-block">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.js"></script>
+</body>
+
+</html>

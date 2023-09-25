@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reg Form</title>
+    <style>
+        
+        #heading{
+            text-align: center;
+            color: blue;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #FFFFE0, #FF69B4);
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+        }
+
+        td.lhs { 
+            padding: 10px;
+            font-weight: bold; 
+            text-align: center; 
+        }
+
+        td.lhs2 { 
+            padding: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        td.lhs3 {
+            padding: 10px;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        
+        td.rhs { 
+            padding: 5px;
+        }
+
+        input[type="text"].rhs-input {
+            width: 99%;
+            padding: 5px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        input[type="text"].rhs-add
+        {
+            height: 200px;
+            width: 97.5%;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        .checkbox-round {
+            width: 1.1em;
+            height: 1.1em;
+            background-color: white;
+            border-radius: 50%;
+            vertical-align: middle;
+            border: 1px solid #000;
+            appearance: none;
+            -webkit-appearance: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .checkbox-round:checked {
+            background-color: grey;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .button-register {
+            display: block;
+            height: 30px;
+            width: 130px;
+            margin: 0 auto;
+            background-color: red;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            border: 3px solid black;
+            border-radius: 19px;
+            cursor: pointer;
+        }
+
+        .error-message {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="heading">Registration form</h1>
+    <table>
+        <tr>
+            <td class="lhs">First Name</td>
+            <td class="rhs">
+                <input type="text" class="rhs-input">
+                <span style="position: absolute; top:90px; right:80px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs">Last Name</td>
+            <td class="rhs">
+                <input type="text" class="rhs-input">
+                <span style="position: absolute; top:128px; right:80px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs">Email</td>
+            <td class="rhs">
+                <input type="text" class="rhs-input">
+                <span style="position: absolute; top:168px; right:80px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs">Password</td>
+            <td class="rhs">
+                <input type="text" class="rhs-input">
+                <span style="position: absolute; top:204px; right:80px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs">Re-enter Password</td>
+           <td class="rhs">
+                <input type="text" class="rhs-input">
+                <span style="position: absolute; top:240px; right:80px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs" rowspan="2">Gender</td>
+            <td class="rhs">
+                <input type="checkbox" class="checkbox-round" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <span style="position: absolute; top:275px; right:80px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rhs">
+                <input type="checkbox" class="checkbox-round" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <span style="position: absolute; top:310px; right:80px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs">Age</td>
+            <td class="rhs">
+                <input type="text" class="rhs-input">
+                <span style="position: absolute; top:341px; right:80px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs">Phone Number</td>
+            <td class="rhs">
+                <input type="text" class="rhs-input">
+                <span style="position: absolute; top:379px; right:80px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs">Address</td>
+            <td class="rhs">
+                <input type="text" class="rhs-input">
+                <span style="position: absolute; top:416px; right:80px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs">State</td>
+            <td class="rhs">
+                <input type="text" class="rhs-input">
+                <span style="position: absolute; top:454px; right:200px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs">Country</td>
+            <td class="rhs">
+                <select class="rhs-input">
+                    <option value="" disabled selected>Choose your country</option>
+                    <option value="country1">India</option>
+                    <option value="country2">England</option>
+                    <option value="country3">Australia</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs">Languages known</td>
+            <td class="rhs">
+                <input type="checkbox" id="male" name="gender" value="male">
+                <label for="male">English</label>
+                <input type="checkbox" id="male" name="gender" value="male">
+                <label for="male">Kannada</label>
+                <input type="checkbox" id="male" name="gender" value="male">
+                <label for="male">Hindi</label>
+                <input type="checkbox" id="male" name="gender" value="male">
+                <label for="male">Telugu</label>
+                <span style="position: absolute; top:500px; right:8px;" class="error-message"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs" colspan="2">
+                <input type="checkbox" checked="checked"> Hereby I declare all the given details are true </input>
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs3" colspan="3">
+                Login to <a href="#">Ethnus</a> website
+            </td>
+        </tr>
+        <tr>
+            <td class="lhs3" colspan="3">
+                <button class="button-register">Register</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        document.querySelector('.button-register').addEventListener('click', function() {
+            var inputs = document.querySelectorAll('.rhs-input');
+            var errorMessages = document.querySelectorAll('.error-message');
+
+            for (var i = 0; i < inputs.length; i++) {
+                if (!inputs[i].value.trim()) {
+                    errorMessages[i].textContent = 'POOR';
+                } else {
+                    errorMessages[i].textContent = '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

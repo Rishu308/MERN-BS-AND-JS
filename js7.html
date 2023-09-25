@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        var img = null;
+        var intervalId = null;
+
+        function init() {
+            img = document.getElementById('myimg');
+            img.style.position = 'relative';
+            img.style.left = '50px';
+        }
+
+        function moveRight() {
+            if (intervalId === null) {
+                intervalId = setInterval(function () {
+                    img.style.left = parseInt(img.style.left) + 10 + 'px';
+                }, 100);
+            }
+        }
+
+        function stopMoving() {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+
+        window.onload = init;
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <!-- Use the provided online image URL as the source -->
+        <img id="myimg" src="https://www.javatpoint.com/oprweb/train1.png" />
+        <center>
+            <p>Click the below buttons to move and stop the image</p>
+            <input type="button" value="Start" onclick="moveRight();" />
+            <input type="button" value="Stop" onclick="stopMoving();" />
+        </center>
+    </form>
+</body>
+
+</html>

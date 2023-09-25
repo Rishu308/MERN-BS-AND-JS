@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time Example</title>
+    <style>
+        .button {
+            padding: 2px 7px;
+            font-size: 16px;
+            text-align: center;
+            background-color: lightgrey;
+            border-radius: 0px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .output {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button class="button" onclick="showDate()">show date</button>
+        <div id="dateOutput" class="output"></div>
+    </div>
+    <br>
+    <div>
+        <button class="button" onclick="showTime()">show Time</button>
+        <div id="timeOutput" class="output"></div>
+    </div>
+
+    <script>
+        function showDate() {
+            var currentDate = new Date();
+            var day = currentDate.getDate();
+            var month = currentDate.toLocaleString('default', { month: 'long' });
+            var year = currentDate.getFullYear();
+
+            var formattedDate = '  '+ day + '/' + month + '/' + year;
+            document.getElementById('dateOutput').innerHTML = formattedDate;
+        }
+
+        function showTime() {
+            var currentTime = new Date();
+            var formattedTime = currentTime.toString();
+            document.getElementById('timeOutput').innerHTML = formattedTime;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
